@@ -29,12 +29,12 @@ export const fieldConfig = [
       placeholder: 'Student ID',
       type: 'text',
     },
-    {
-      label: 'Student Name',
-      name: 'student_name',
-      placeholder: 'Student Name',
-      type: 'text',
-    },
+    // {
+    //   label: 'Student Name',
+    //   name: 'student_name',
+    //   placeholder: 'Student Name',
+    //   type: 'text',
+    // },
     {
       label: 'Amount Paid',
       name: 'amount',

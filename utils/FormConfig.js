@@ -5,9 +5,9 @@ export const createInitialFormState = (formFieldConfig) => {
     }, {});
   };
   
-  export const validateForm = (formFieldConfig, data) => {
+  export const validateForm = (fieldConfig, data) => {
     const newErrors = {};
-    formFieldConfig.forEach((field) => {
+    fieldConfig.forEach((field) => {
       if (!data[field.name]) {
         newErrors[field.name] = 'This field is required';
       }
