@@ -1,4 +1,4 @@
-export const users = [
+export const userData = [
     {
       username: 'john_doe',
       email: 'john.doe@example.com',
@@ -29,9 +29,5 @@ export const users = [
       phoneNumber: '+1543218765',
       userRole: 'User'
     }
-  ];
-  
-  // Example usage:
-  console.log(users[0]); // Outputs the first user object
-  console.log(users.length); // Outputs the number of users in the array
+];
   

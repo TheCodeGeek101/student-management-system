@@ -4,7 +4,7 @@ import DataTable from 'react-data-table-component';
 import { FaEdit, FaEye, FaFileCsv, FaPlus, FaUsers } from 'react-icons/fa';
 import { studentData } from '@/data/students';
 import AddUser from './AddUsers';
-import { users } from '@/data/users';
+import { userData } from '@/data/users';
 
 export function Users() {
   const [search, setSearch] = useState('');
@@ -74,7 +74,7 @@ export function Users() {
   };
 
   useEffect(() => {
-    const result = users.filter((item) => {
+    const result = userData.filter((item) => {
       return item.username.toLowerCase().includes(search.toLowerCase());
     });
     setFilter(result);
@@ -109,15 +109,6 @@ export function Users() {
               >
                 <FaPlus className=" mr-2 inline-block " /> Add User
               </button>
-              {/* <button
-                onClick={() => downloadCsv()}
-                className="transform rounded-sm bg-secondary px-2 py-2 font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-opacity-50 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
-              >
-                <div className="flex items-center justify-center text-sm text-white">
-                  <FaFileCsv className="mr-2" />
-                  Export CSV
-                </div>
-              </button> */}
             </div>
           </div>
           <div className="overflow-x-scroll">

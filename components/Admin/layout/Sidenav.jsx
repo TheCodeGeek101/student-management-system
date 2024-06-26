@@ -53,15 +53,15 @@ const AdminSidenav = ({ onSidebarClick }) => {
     onSidebarClick(componentName);
   };
 
-//   const handleLogout = async () => {
-//     setLoading(true);
-//     try {
-//       await logout();
-//       router.push('/Auth');
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
+  const handleLogout = async () => {
+    // setLoading(true);
+    try {
+      // await logout();
+      router.push('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <motion.aside
@@ -135,14 +135,14 @@ const AdminSidenav = ({ onSidebarClick }) => {
         <Link
           href="/payment"
           passHref
-          className="inline-block w-full px-8 py-2 mb-4 text-xs font-bold leading-normal text-center text-white capitalize transition-all ease-in rounded-lg shadow-md bg-slate-700 bg-150 hover:shadow-xs hover:-translate-y-px"
+          className="inline-block w-full px-8 py-2 mb-4 text-xs font-bold leading-normal text-center text-white capitalize transition-all ease-in rounded-lg shadow-md bg-primary bg-150 hover:shadow-xs hover:-translate-y-px"
         >
           Make Payment
         </Link>
         <Link
           href="#"
-          className="inline-block w-full px-8 py-2 text-xs font-bold leading-normal text-center text-white align-middle transition-all ease-in bg-orange-500 border-0 rounded-lg shadow-md select-none bg-150 bg-x-25 hover:shadow-xs hover:-translate-y-px"
-        //   onClick={handleLogout}
+          className="inline-block w-full px-8 py-2 text-xs font-bold leading-normal text-center text-white align-middle transition-all ease-in bg-primary border-0 rounded-lg shadow-md select-none bg-150 bg-x-25 hover:shadow-xs hover:-translate-y-px"
+          onClick={handleLogout}
         >
           {loading ? 'Come back soon...' : 'Logout'}
         </Link>

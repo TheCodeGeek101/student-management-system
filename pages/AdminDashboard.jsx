@@ -1,10 +1,12 @@
-
+// pages/Admin/index.js
+import AdminIndex from "@/components/Admin/Index";
+import AdminSidenav from "@/components/Admin/layout/Sidenav";
+import Users from "@/components/Admin/users/Users";
 import DashboardNavbar from "@/components/layout/DashboardNavbar";
-import Sidenav from "@/components/layout/Sidebar";
-import Index from "@/components/parents/Index";
+
 import { useCallback, useState } from "react";
 
-export default function Dashboard() {
+export default function Admin() {
   const [activeComponent, setActiveComponent] = useState('');
 
   const handleSidebarClick = useCallback((componentName) => {
@@ -14,16 +16,18 @@ export default function Dashboard() {
   const renderComponent = () => {
     switch (activeComponent) {
       case 'Dashboard':
-        return <Index />;
+        return <AdminIndex />;
+      case 'Users':
+        return <Users />;
       // Add more cases for other components as needed
       default:
-        return <Index />;
+        return <AdminIndex />;
     }
   };
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Sidenav onSidebarClick={handleSidebarClick} />
+      <AdminSidenav onSidebarClick={handleSidebarClick} />
       <div className="flex-grow p-4 xl:ml-80">
         <DashboardNavbar activeComponent={activeComponent} />
         {renderComponent()}

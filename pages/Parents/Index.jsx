@@ -8,13 +8,11 @@ const Login = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    router.push('/Parents/Dashboard');
+    router.push('/ParentDashboard');
   }
     return (
         <div className="flex justify-center items-center h-screen">
             <div className="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
-               
-           
                 <div className="flex justify-center mb-6">
                     <h1 className='font-bold text-2xl text-primary'>
                         Parents Portal
