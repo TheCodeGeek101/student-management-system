@@ -1,7 +1,7 @@
 import Image from 'next/image'; // Import Image from Next.js
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
+import fcb from "../../public/images/fcb.jpg";
 const Login = () => {
 
   const router = useRouter();
@@ -14,10 +14,20 @@ const Login = () => {
     <div className="flex justify-center items-center h-screen">
         <div className="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
             <div className="flex justify-center mb-6">
-                <h1 className='font-bold text-2xl'>
+                <h1 className='font-bold text-2xl text-primary'>
                     Admin Portal
                 </h1>
+                
             </div>
+            <div className="flex justify-center">
+                <Image
+              src={fcb}
+              className="inline h-full max-w-full  transition-all duration-200 dark:hidden ease-nav-brand "
+              alt="main_logo"
+              width={100}
+              height={200}
+            />
+                </div>
 
             <form onSubmit={onSubmit} className="mt-6">
                 <div>
@@ -45,7 +55,7 @@ const Login = () => {
                 <div className="mt-6">
                     <button
                         type="submit"
-                        className="w-full px-6 py-2.5 text-sm font-medium text-white uppercase bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
+                        className="w-full px-6 py-2.5 text-sm font-medium text-white uppercase bg-primary rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
                     >
                         Sign In
                     </button>

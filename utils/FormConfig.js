@@ -5,6 +5,7 @@ export const createInitialFormState = (formFieldConfig) => {
     }, {});
   };
   
+  
   export const validateForm = (fieldConfig, data) => {
     const newErrors = {};
     fieldConfig.forEach((field) => {
@@ -14,6 +15,7 @@ export const createInitialFormState = (formFieldConfig) => {
     });
     return newErrors;
   };
+  
   
   // Validates individual fields based on the field type and set rules
   export const validateField = (name, value) => {

@@ -71,3 +71,35 @@ export const fieldConfig = [
         type: 'select',
       },
   ];
+  // Client field config
+export const userFieldConfig = [
+    {
+      label: 'User Role',
+      name: 'role',
+      placeholder: 'User Role',
+      options: [
+        { label: 'Admin', value: 'admin' },
+        { label: 'Parent', value: 'parent' },
+        { label: 'Officer', value: 'officer' },
+      ],
+      type: 'select',
+    },
+    {
+      label: 'Username',
+      name: 'username',
+      placeholder: 'Username',
+      type: 'text',
+    },
+    {
+      label: 'Email Address',
+      name: 'email',
+      placeholder: 'Email Address',
+      type: 'email',
+    },
+    {
+      label: 'Phone Number',
+      name: 'phone_number',
+      placeholder: 'Phone Number',
+      type: 'text',
+    }
+  ];

@@ -1,6 +1,7 @@
 
 import AdminIndex from "@/components/Admin/Index";
 import AdminSidenav from "@/components/Admin/layout/Sidenav";
+import Users from "@/components/Admin/users/Users";
 import DashboardNavbar from "@/components/layout/DashboardNavbar";
 
 import { useCallback, useState } from "react";
@@ -16,6 +17,8 @@ export default function Admin() {
     switch (activeComponent) {
       case 'Dashboard':
         return <AdminIndex />;
+      case 'Users':
+        return <Users />;
       // Add more cases for other components as needed
       default:
         return <AdminIndex />;

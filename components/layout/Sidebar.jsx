@@ -10,7 +10,8 @@ import {
   FaUser,
 } from 'react-icons/fa';
 import Image from 'next/image';
-
+// import fcb from "../../public/images/fcb.png";
+import fcb from "../../public/images/fcb.jpg";
 const Sidenav = ({ onSidebarClick }) => {
   const links = [
     {
@@ -79,6 +80,7 @@ const Sidenav = ({ onSidebarClick }) => {
           className="absolute top-0 right-0 p-4 opacity-50 cursor-pointer fas fa-times dark:text-white text-slate-400 xl:hidden"
           sidenav-close
         ></i>
+        <h1 className='font-bold text-2xl text-primary'>Parent's Portal</h1>
         <Link href="/" passHref>
           <div className="block px-8 py-6 m-0 text-sm whitespace-nowrap dark:text-white text-slate-700">
             {/* <Image
@@ -89,15 +91,13 @@ const Sidenav = ({ onSidebarClick }) => {
               height={20}
             /> */}
             <Image
-              src="/assets/images/Logo.png"
-              className="hidden h-full max-w-full transition-all duration-200 dark:inline ease-nav-brand max-h-8"
+              src={fcb}
+              className="inline h-full max-w-full transition-all duration-200 dark:hidden ease-nav-brand max-h-8"
               alt="main_logo"
-              width={20}
-              height={20}
+              width={100}
+              height={100}
             />
-            <span className="ml-3 font-bold transition-all duration-200 ease-nav-brand text-gray-700">
-              Parent's Portal
-            </span>
+            
           </div>
         </Link>
       </div>
@@ -134,13 +134,13 @@ const Sidenav = ({ onSidebarClick }) => {
         <Link
           href="/payment"
           passHref
-          className="inline-block w-full px-8 py-2 mb-4 text-xs font-bold leading-normal text-center text-white capitalize transition-all ease-in rounded-lg shadow-md bg-slate-700 bg-150 hover:shadow-xs hover:-translate-y-px"
+          className="inline-block w-full px-8 py-2 mb-4 text-xs font-bold leading-normal text-center text-white capitalize transition-all ease-in rounded-lg shadow-md bg-primary bg-150 hover:shadow-xs hover:-translate-y-px"
         >
           Make Payment
         </Link>
         <Link
           href="#"
-          className="inline-block w-full px-8 py-2 text-xs font-bold leading-normal text-center text-white align-middle transition-all ease-in bg-orange-500 border-0 rounded-lg shadow-md select-none bg-150 bg-x-25 hover:shadow-xs hover:-translate-y-px"
+          className="inline-block w-full px-8 py-2 text-xs font-bold leading-normal text-center text-white align-middle transition-all ease-in bg-primary border-0 rounded-lg shadow-md select-none bg-150 bg-x-25 hover:shadow-xs hover:-translate-y-px"
         //   onClick={handleLogout}
         >
           {loading ? 'Come back soon...' : 'Logout'}

@@ -35,7 +35,7 @@ const Index = () => {
             className="card text-primary-content mx-auto block rounded-lg border bg-white p-10 transition duration-200 hover:bg-white/30"
           >
             <div className="card-body">
-              <h2 className="flex items-center font-bold capitalize">
+              <h2 className="flex items-center font-bold text-primary capitalize">
                 {detail.title}
               </h2>
               <p className="mt-4 text-secondary">{detail.description}</p>

@@ -10,7 +10,7 @@ import {
   FaUser,
 } from 'react-icons/fa';
 import Image from 'next/image';
-
+import fcb from "../../../public/images/fcb.jpg"
 const AdminSidenav = ({ onSidebarClick }) => {
   const links = [
     {
@@ -20,8 +20,8 @@ const AdminSidenav = ({ onSidebarClick }) => {
       colour: '#ff0000',
     },
     {
-      name: 'Profile',
-      link: '/profile',
+      name: 'Users',
+      link: 'Users',
       reactIcon: <FaUser />,
       colour: '#00ff00',
     },
@@ -79,15 +79,16 @@ const AdminSidenav = ({ onSidebarClick }) => {
           className="absolute top-0 right-0 p-4 opacity-50 cursor-pointer fas fa-times dark:text-white text-slate-400 xl:hidden"
           sidenav-close
         ></i>
+        <h1 className='font-bold text-xl text-blue-800'>Admin Portal</h1>
         <Link href="/" passHref>
           <div className="block px-8 py-6 m-0 text-sm whitespace-nowrap dark:text-white text-slate-700">
-            {/* <Image
-              src="/assets/images/Logo.png"
+            <Image
+              src={fcb}
               className="inline h-full max-w-full transition-all duration-200 dark:hidden ease-nav-brand max-h-8"
               alt="main_logo"
-              width={20}
-              height={20}
-            /> */}
+              width={100}
+              height={100}
+            />
             <Image
               src="/assets/images/Logo.png"
               className="hidden h-full max-w-full transition-all duration-200 dark:inline ease-nav-brand max-h-8"
@@ -95,9 +96,9 @@ const AdminSidenav = ({ onSidebarClick }) => {
               width={20}
               height={20}
             />
-            <span className="ml-3 font-bold transition-all duration-200 ease-nav-brand text-gray-700">
+            {/* <span className="ml-3 font-bold transition-all duration-200 ease-nav-brand text-gray-700">
               Admin Portal
-            </span>
+            </span> */}
           </div>
         </Link>
       </div>
@@ -108,10 +109,10 @@ const AdminSidenav = ({ onSidebarClick }) => {
         <ul className="flex flex-col pl-0 mb-0">
           {links.map((link, i) => (
             <li className="mt-0.5 w-full" key={i}>
-              <Link
+              {/* <Link
                 href={link.link}
                 passHref
-              >
+              > */}
                 <div
                   className="py-2.7 bg-blue-500/13 text-dark opacity-80 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap rounded-lg px-4 font-semibold text-slate-700 transition-colors"
                   onClick={() => handleClick(link.name)}
@@ -123,7 +124,7 @@ const AdminSidenav = ({ onSidebarClick }) => {
                     {link.name}
                   </span>
                 </div>
-              </Link>
+              {/* </Link> */}
             </li>
           ))}
         </ul>
