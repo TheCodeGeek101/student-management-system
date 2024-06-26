@@ -17,31 +17,31 @@ const Sidenav = ({ onSidebarClick }) => {
   const links = [
     {
       name: 'Dashboard',
-      link: '/dashboard',
+    //   link: '/dashboard',
       reactIcon: <FaChartLine />,
       colour: '#ff0000',
     },
     {
       name: 'Profile',
-      link: '/profile',
+    //   link: '/profile',
       reactIcon: <FaUser />,
       colour: '#00ff00',
     },
     {
       name: 'Support',
-      link: '/support',
+    //   link: '/support',
       reactIcon: <FaLifeRing />,
       colour: '#0000ff',
     },
     {
       name: 'Payment',
-      link: '/payment',
+    //   link: '/payment',
       reactIcon: <FaMoneyBill />,
       colour: '#ffff00',
     },
     {
       name: 'Session',
-      link: '/session',
+    //   link: '/session',
       reactIcon: <FaClock />,
       colour: '#ff00ff',
     },
@@ -109,10 +109,7 @@ const Sidenav = ({ onSidebarClick }) => {
         <ul className="flex flex-col pl-0 mb-0">
           {links.map((link, i) => (
             <li className="mt-0.5 w-full" key={i}>
-              <Link
-                href={link.link}
-                passHref
-              >
+             
                 <div
                   className="py-2.7 bg-blue-500/13 text-dark opacity-80 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap rounded-lg px-4 font-semibold text-slate-700 transition-colors"
                   onClick={() => handleClick(link.name)}
@@ -124,7 +121,7 @@ const Sidenav = ({ onSidebarClick }) => {
                     {link.name}
                   </span>
                 </div>
-              </Link>
+              
             </li>
           ))}
         </ul>
